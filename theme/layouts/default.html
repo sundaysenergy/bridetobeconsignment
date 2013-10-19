@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{data.title}} | {{page.title}}</title>
+  {{# page.description }}
+  <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+  <meta name="author" content="{{ data.author.name }}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	{{{ stylesheets.all }}}
+
+	<link rel="icon" href="{{urls.theme}}/media/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{urls.theme}}/media/favicon.ico" type="image/x-icon">
+
+	{{{ javascripts.all }}}
+
+	<!--[if lt IE 8]>
+		<div style='clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+				<img src="http://storage.ie6countdown.com/assets/100/{{urls.theme}}/media/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+			</a>
+		</div>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
+</head>
+<body id="page1">
+
+	<!--======================== header ============================-->
+	<header>
+		<div class="container_12 indent-bottom">
+			<div class="grid_12">
+				<!--======================== logo ============================-->
+				<div>
+  				<h1>
+  					<a href="/">{{data.title}}</a>
+  				</h1>
+  				<div class="logo12">
+  				  <span class="logotext">
+  				    {{data.tagline}}
+  				  </span>
+  				</div>
+				</div>
+				<!--======================== menu ============================-->
+				<div class="menu-border-bot">
+					<nav>
+						<div id="menu-icon">Menu <span></span></div>
+						<ul class="menu responsive-menu">
+              {{# data.navigation?to_pages?mark_active_page }}
+                {{> pages_list }}
+              {{/ data.navigation?to_pages?mark_active_page }}
+              <li><a href="https://www.facebook.com/BrideToBe">Facebook</a></li>
+            </ul>
+					</nav>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+{{# page.slider }}
+		<!--=================== slider ==================-->
+		<div class="slider-bg">
+			<div class="container_12">
+				<div class="wrapper">
+					<div class="grid_12">
+						<div id="slides">
+							<div class="slides_container">
+                <div class="slide"><img src="{{urls.theme}}/media/slide0.jpg" alt="Bride To Be"></div>
+                <div class="slide"><img src="{{urls.theme}}/media/slide1.jpg" alt=""></div>
+								<div class="slide"><img src="{{urls.theme}}/media/slide2.jpg" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{{/ page.slider }}
+	</header>
+
+	<!--======================== content ===========================-->
+	<section id="content">
+		<div class="bg1">
+		  <div class="container_12">
+  		  <div class="wrapper">
+					<div class="grid_6">
+						<div class="indent-right6-1">
+ 							<div class="slidewrap">
+    						{{{ page.content }}}
+ 							</div>
+						</div>
+					</div>
+					<div class="grid_6 last-col">
+						<div class="wrapper">
+							<div class="dgrid_3">
+								<h3 class="p2">Hours</h3>
+                <strong>Monday</strong> 10:00am - 8:00pm<br />
+                <strong>Tuesday</strong> 10:00am - 6:00pm<br />
+                <strong>Wednesday</strong> 10:00am - 6:00pm<br />
+                <strong>Thursday</strong> 10:00am - 8:00pm<br />
+                <strong>Friday</strong> 10:00am - 6:00pm<br />
+                <strong>Saturday</strong> 10:00am - 3:00pm<br />
+                <strong>Sunday</strong> 10:00am - 3:00pm
+							</div>
+							<div class="dgrid_3">
+								<h3 class="p2">Closed for the following</h3>
+                <strong>January</strong> - New Years Day<br />
+                <strong>April</strong> - Easter Sunday<br />
+                <strong>May</strong> - Memorial Day<br />
+                <strong>July</strong> - Independence Day (4th of July)<br />
+                <strong>September</strong> - Labor Day<br />
+                <strong>November</strong> - Thanksgiving Day<br />
+                <strong>December</strong> - Christmas Eve & Christmas Day
+							</div>
+						</div>
+					</div>
+					<!-- ./grid_6 -->
+  		  </div>
+  		  <!-- ./wrapper -->
+
+
+
+
+		  </div>
+		</div>
+	</section>
+	<!--======================== footer ============================-->
+	<footer>
+		<div class="container_12">
+			<div class="wrapper">
+				<div class="grid_12 footer-text">
+					<p><phone>{{ data.author.phone }}</phone></p>
+          <p class="p0">{{ data.author.name }} &copy; 2013 </p>
+					<div class="footer-link"><!--{%FOOTER_LINK} --></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

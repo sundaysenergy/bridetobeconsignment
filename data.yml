@@ -1,0 +1,21 @@
+title : Bride To Be
+tagline: Consignment
+author :
+  name : Bride To Be Consignment
+  email : info@BrideToBeConsignment.com
+  facebook: 166350516717942 #Page ID BrideToBe
+  facebook_user: 100001398326170 #User ID BrideToBeConsignment
+
+navigation:
+  -
+    title: Home
+    path: /
+  -
+    title: Consignment
+    path: /consignment
+  -
+    title: Contact
+    path: /contact
+  -
+    title: Facebook
+    path: https://www.facebook.com/BrideToBe
