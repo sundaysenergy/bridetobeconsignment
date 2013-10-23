@@ -10,6 +10,7 @@
 	overflow:hidden;
 	padding-bottom:16px;
 	background:url(../media/slider-shadow.png) center bottom no-repeat;
+  text-align: center;
 }
 .slide{width:940px; height:auto;}
 
