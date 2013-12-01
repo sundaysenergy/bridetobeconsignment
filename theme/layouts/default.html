@@ -89,6 +89,9 @@
 						<div class="indent-right6-1">
  							<div class="slidewrap">
     						{{{ page.content }}}
+                {{ ^page.content }}
+                  {{{ content }}}
+                {{ /page.content }}
  							</div>
 						</div>
 					</div>
